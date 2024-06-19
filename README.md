@@ -23,4 +23,4 @@ THIS IS AN OBJECT THAT HAS BEEN DETECTED BY THE SAILBOAT VISION.
 4. **Check Collision Condition:** Formulate the condition where the distance between the two circles is less than or equal to the sum of their radii.
 5. **Solve for Interference:** Use a quadratic equation to check if and when the relative motion results in a future collision or interference.
 
-    - stop moving until obejct has passed ---> turn upwind wind and slow down
+    - stop moving until object has passed ---> turn upwind (no-go zone) and slow down
