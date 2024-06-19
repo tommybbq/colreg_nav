@@ -22,3 +22,5 @@ THIS IS AN OBJECT THAT HAS BEEN DETECTED BY THE SAILBOAT VISION.
 3. **Calculate Relative Motion:** Determine the relative position and velocity of the object with respect to the boat.
 4. **Check Collision Condition:** Formulate the condition where the distance between the two circles is less than or equal to the sum of their radii.
 5. **Solve for Interference:** Use a quadratic equation to check if and when the relative motion results in a future collision or interference.
+
+    - stop moving until obejct has passed ---> turn upwind wind and slow down
