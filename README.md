@@ -1,5 +1,11 @@
 # colreg_nav
-The collision regulation repository
+The collision regulation repository. It builds off of the previous guide-nav repository
+
+**guide-nav** repository contains:
+- Global Path Planning (takes environmental information and a destination and solves global feasible path)
+- Local Path Planning (takes set of waypoints from Global Path Planning and finds how next waypoint is reached)
+- Low-Level Control (used to control Boat to next waypoint from Local Path Planning; Heading and Speed Control)
+
 
 # Checking for an inevitable collision
 
