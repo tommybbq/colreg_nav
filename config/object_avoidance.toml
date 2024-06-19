@@ -1,0 +1,4 @@
+conf_thres = 0.25
+iou_thres = 0.45
+agnostic_nms = false
+max_det = 1000

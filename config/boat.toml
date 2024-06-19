@@ -1,0 +1,21 @@
+[physical_constraints]
+#Performance characteristics
+min_rudder_angle = -60
+max_rudder_angle = 60
+min_flap_angle = -40
+max_flap_angle = 40
+min_upwind_angle = 40
+min_downwind_angle = 40
+max_sail_angle = 90
+min_sail_angle = 0
+flap_mount_arm = 3
+lin_actuator_retracted_len = 8.94
+lin_actuator_mounting_len = 10.6
+
+[physical_properties]
+wingsail_chord = 0.381
+wingsail_span = 2.02563984
+flap_chord = 0.17778984
+flap_span = 0.5586984
+rudder_plan_area = 0.1
+rudder_span = 0.33333333333333

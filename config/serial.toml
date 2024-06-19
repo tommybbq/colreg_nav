@@ -1,0 +1,27 @@
+[commands]
+begin = "B"
+end = "E"
+off = "O"
+multi = "M"
+port = "P"
+starboard = "S"
+flap = "F"
+wingsail = "W"
+initialization = "I"
+uler = "U"
+magnetometer = "C"
+acceleration = "A"
+wind_speed = "G"
+wind_angle = "D"
+
+[connection]
+port = "/dev/ttyUSB0"
+baud_rate = 115200
+byte_size = 8  # serial.EIGHTBITS
+parity = "N"  # serial.PARITY_NONE
+stop_bits = 1  # serial.STOPBITS_ONE
+read_timeout = 0.1
+write_timeout = 0.1
+
+[messaging]
+max_read_count = 64

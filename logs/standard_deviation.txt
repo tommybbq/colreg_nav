@@ -1,0 +1,1 @@
+gps_lat_std_dev = 1.5398910734328143e-05, gps_lon_std_dev = 2.0185302222907908e-05, gps_speed_std_dev = 0.09354343150978241, gps_yaw_std_dev = 0.030727062877409828, wind_mag_std_dev = 0.018519351117114533, wind_angle_std_dev = 0.5726030692814199
