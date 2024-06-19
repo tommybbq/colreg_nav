@@ -3,7 +3,13 @@ The collision regulation repository
 
 # Checking for an inevitable collision
 
-THIS AN OBJECT THAT HAS BEEN DETECTED BY THE SAILBOAT VISION 
+THIS IS AN OBJECT THAT HAS BEEN DETECTED BY THE SAILBOAT VISION.
+
+**Scenarios:**
+- object is stationary and is not in the boat's route --> do nothing
+- object is moving and is NOT going to intersect the boat's trajectory ---> do nothing
+- object is moving and IS going to intersect the boat's trajectory at some point ---> ‼️
+     - check if a collision is imminent using the steps below 
 
 1. **Define Bounding Circles:** We use the longest distance to an edge to define the radius of a bounding circle for both the sailboat and the object.
 2. **Convert to Velocity Vectors:** Translate the headings and speeds into velocity vectors.
