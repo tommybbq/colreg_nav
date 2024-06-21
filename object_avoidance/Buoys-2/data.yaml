@@ -1,0 +1,12 @@
+names:
+- Buoy
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: buoys
+  url: https://universe.roboflow.com/buoy-9hp7v/buoys/dataset/2
+  version: 2
+  workspace: buoy-9hp7v
+test: /Users/shreyessridhara/Documents/colreg_nav/object_avoidance/Buoys-2/test/images #../test/images
+train: /Users/shreyessridhara/Documents/colreg_nav/object_avoidance/Buoys-2/train/images #Buoys-2/train/images
+val: /Users/shreyessridhara/Documents/colreg_nav/object_avoidance/Buoys-2/valid/images #Buoys-2/valid/images
