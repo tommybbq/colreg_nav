@@ -2,8 +2,8 @@ from ultralytics import YOLO
 from ultralytics.models.yolo.detect import DetectionPredictor
 import cv2
 
-model = YOLO("yolov8s.pt")
-results = model.predict(source="/Users/shreyessridhara/Documents/boatpic.jpeg", show=True, conf=0.4) #essentially just use the 360-degree camera as source!
+model = YOLO("yolov8s.pt") #/Users/shreyessridhara/Documents/colreg_nav/object_avoidance/runs/detect/train2/weights/bestbuoys.pt
+results = model.predict(source="/Users/shreyessridhara/Documents/boatvideo.mp4", show=True, conf=0.4) #essentially just use the 360-degree camera as source!
 print(results)
 
 '''from ultralytics import YOLO
