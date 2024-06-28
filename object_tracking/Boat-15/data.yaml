@@ -1,0 +1,12 @@
+names:
+- ship
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: boat-f2m4y
+  url: https://universe.roboflow.com/tri-uuls0/boat-f2m4y/dataset/15
+  version: 15
+  workspace: tri-uuls0
+test: /Users/shreyessridhara/Documents/colreg_nav/object_tracking/Boat-15/test
+train: /Users/shreyessridhara/Documents/colreg_nav/object_tracking/Boat-15/train
+val: /Users/shreyessridhara/Documents/colreg_nav/object_tracking/Boat-15/valid
