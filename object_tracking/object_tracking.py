@@ -1,15 +1,25 @@
 import cv2
 from ultralytics import YOLO
 
-model = YOLO("yolov10n.pt")
+# Initialize the YOLO model with the path to your best.pt file
+model = YOLO("/Users/shreyessridhara/Documents/colreg_nav/object_tracking/best.pt")
+#https://universe.roboflow.com/cheng-nvnun/cheng-scgtz/browse?queryText=class%3Afish-b&pageSize=50&startingIndex=0&browseQuery=true
 
-video_path = "/Users/shreyessridhara/Documents/boatvideo.mp4"
+# Path to your video file
+video_path = "/Users/shreyessridhara/Documents/container.mp4"
 cap = cv2.VideoCapture(video_path)
 
-known_height = 5.0  # Example: 5 meters
+# Dictionary to store average lengths of different boat classes (in meters)
+known_lengths = {
+    'container': 300.0,
+    'cruise': 250.0,
+    'fish-b': 5.0, #15
+    'sail boat': 5.0,#14
+    'warship': 150.0
+}
 
 # Camera focal length (in pixels), obtained from camera calibration
-focal_length = 1000  # Example value
+focal_length = 2000  # Example value
 
 ret = True
 while ret:
@@ -21,15 +31,19 @@ while ret:
         
         for result in results:
             boxes = result.boxes
-            for box in boxes:
+            classes = result.names
+            for box, cls in zip(boxes, classes):
                 # Extract the bounding box coordinates
                 x1, y1, x2, y2 = map(int, box.xyxy[0])
                 
-                # Calculate the perceived height of the boat in the image
-                perceived_height = y2 - y1
+                # Calculate the perceived length of the boat in the image
+                perceived_length = x2 - x1
+                
+                # Get the known length for the detected boat class
+                known_length = known_lengths.get(cls, 10.0)  # Default to 10.0 meters if class not found
                 
                 # Calculate the distance to the boat
-                distance = (known_height * focal_length) / perceived_height
+                distance = (known_length * focal_length) / perceived_length
                 
                 # Display the distance on the frame in black, offset to avoid overlapping
                 cv2.putText(frame_, f'Distance: {distance:.2f}m', (x1, y1 - 30),
